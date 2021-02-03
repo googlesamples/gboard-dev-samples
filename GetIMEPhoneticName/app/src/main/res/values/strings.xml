@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GetIMEPhoneticName</string>
+    <string name="field_with_phonetic_representation_privateimeoption">Field with phonetic representation + privateImeOption</string>
+    <string name="field_without_phonetic_representation">No phonetic representation</string>
+    <string name="field_with_phonetic_representation_no_options">Phonetic representation, but no privateImeOption</string>
+    <string name="last_phonetic_info_detected">Last phonetic info detected</string>
+    <string name="cumulative_title">Cumulative</string>
+    <string name="counter_examples">COUNTER EXAMPLES (no phonetic detection)</string>
+    <string name="detection_results">DETECTION RESULTS</string>
+</resources>

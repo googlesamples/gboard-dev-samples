@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextPhoneticWithOptions"
+        android:layout_width="324dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:privateImeOptions="com.google.android.inputmethod.latin.requestPhoneticOutput"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editTextNoPhonetic"
+        android:layout_width="166dp"
+        android:layout_height="40dp"
+        android:editable="true"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="none"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/editTextPhoneticNoOptions"
+        android:layout_width="177dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/lastPhoneticInfoDisplay"
+        android:layout_width="167dp"
+        android:layout_height="40dp"
+        android:editable="false"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="none"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/cumulativeInfo"
+        android:layout_width="177dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/cumulTitle"
+        app:layout_constraintTop_toBottomOf="@+id/cumulTitle" />
+
+    <TextView
+        android:id="@+id/tvDetectionResults"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:layout_width="363dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/detection_results"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ff0f67b0"
+        app:layout_constraintStart_toStartOf="@+id/tvCounterExamples"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhoneticNoOptions" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:labelFor="@id/editTextPhoneticWithOptions"
+        android:text="@string/field_with_phonetic_representation_privateimeoption"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/tvCounterExamples"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:layout_width="363dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/counter_examples"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ff0f67b0"
+        app:layout_constraintStart_toStartOf="@+id/editTextPhoneticWithOptions"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhoneticWithOptions" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="165dp"
+        android:layout_height="37dp"
+        android:labelFor="@id/editTextNoPhonetic"
+        android:text="@string/field_without_phonetic_representation"
+        app:layout_constraintStart_toStartOf="@+id/tvCounterExamples"
+        app:layout_constraintTop_toBottomOf="@+id/tvCounterExamples" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="173dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="24dp"
+        android:labelFor="@id/editTextPhoneticNoOptions"
+        android:text="@string/field_with_phonetic_representation_no_options"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/lastPhoneticInfoDisplay"
+        android:text="@string/last_phonetic_info_detected"
+        app:layout_constraintStart_toStartOf="@+id/tvDetectionResults"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetectionResults" />
+
+    <TextView
+        android:id="@+id/cumulTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:labelFor="@id/lastPhoneticInfoDisplay"
+        android:text="@string/cumulative_title"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
