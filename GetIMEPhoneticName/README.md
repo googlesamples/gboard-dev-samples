@@ -1,4 +1,4 @@
-# GetIMEPhoneticOut
+# GetIMEPhoneticName
 
 This project is a sample application intended to demonstrate capturing Japanese
 language phonetic information from an IME in Android.
